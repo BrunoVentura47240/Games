@@ -9,6 +9,19 @@ hr{
     background-color: black;
 }
 
+a, a:visited {
+    color: black;
+    border:1px solid black;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+}
+a:hover {
+    color: red;
+    font-size:125%;
+}
+
 #container{
     padding: 20px;
 }

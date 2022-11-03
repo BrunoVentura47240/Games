@@ -6,3 +6,16 @@ body {
 hr {
     width: 1000px;
 }
+
+a, a:visited {
+    color: black;
+    border:1px solid black;
+    border-radius: 25px;
+    padding: 25px 25px;
+    text-align: center;
+    display: inline-block;
+}
+a:hover {
+    color: red;
+    font-size:125%;
+}
