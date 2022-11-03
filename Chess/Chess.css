@@ -1,10 +1,21 @@
+html,
 body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-hr {
-    width: 1000px;
+h1{
+    padding-left: 50px;
+    padding-top: 1%;
+}
+
+h2{
+    padding-left: 50px;
+    padding-top: 2%;
 }
 
 a, a:visited {
@@ -12,45 +23,86 @@ a, a:visited {
     border:1px solid black;
     border-radius: 25px;
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
     display: inline-block;
+    font-size:50%;
 }
 a:hover {
     color: red;
-    font-size:125%;
+    font-size:65%;
+}
+
+hr {
+    width: 1008px;
+}
+
+div *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#turn {
+    max-width: 451px;
+    max-height: 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-style: inset;
+    text-align: center;
+    padding: 5px 0 0 0;
+    background: #fff;
+    transition: .85s linear;
+}
+
+.turnhighlight {
+    background: #5cb85c;
+    color: #fff;
 }
 
 #board {
-    width: 800px;
-    height: 800px;
+    max-width: 504px;
+    max-height: 504px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 20px auto;
+}
 
-    
-    border: 10px solid #bbada0;
-
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+.tileName{
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+    margin: 3px;
+    padding: 15px 0 0 20px;
 }
 
 .tile {
-    width: 90px;
-    height: 90px;
-    
-    border: 5px solid #bbada0;
-
-    font-size: 40px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+    float: left;
+    margin: 3px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    font-size: 30pt;
+    padding: 0 0 0 6px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.blackTile {
-    background-color: #eee4da;
-    color: black;
-}
+.tile:hover {
+    color: #fff;
+    background: rgba(37, 88, 228, 0.712);
+  }
 
-.whiteTile {
-    background-color: #ece0ca;
-    color: white;
+.black {
+    background: rgba(128, 128, 128, 0.801);
 }

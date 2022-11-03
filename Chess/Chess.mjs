@@ -11,31 +11,46 @@ window.onload = function(){
 
 function setupGame(){
     board = [
-        ['BT','BH','BB','BQ','BK','BB','BH','BT'],
-        ['BP','BP','BP','BP','BP','BP','BP','BP'],
         [' ',' ',' ',' ',' ',' ',' ',' ',],
         [' ',' ',' ',' ',' ',' ',' ',' ',],
         [' ',' ',' ',' ',' ',' ',' ',' ',],
         [' ',' ',' ',' ',' ',' ',' ',' ',],
-        ['WP','WP','WP','WP','WP','WP','WP','WP'],
-        ['WT','WH','WB','WQ','WK','WB','WH','WT']
+        [' ',' ',' ',' ',' ',' ',' ',' ',],
+        [' ',' ',' ',' ',' ',' ',' ',' ',],
+        [' ',' ',' ',' ',' ',' ',' ',' ',],
+        [' ',' ',' ',' ',' ',' ',' ',' ',]
     ]
 
     for(let r = 0; r<ROWS; r++){
+        let tileName = document.createElement("div")
+        tileName.classList.add("tileName")
+        tileName.innerText = ROWS-r
+        document.getElementById("board").append(tileName)
+
         for(let c = 0; c<COLUMNS; c++){
             let tile = document.createElement("div")
-            tile.id = r.toString()+"-"+c.toString()
-            tile.classList.add("tile")
-            //tile.addEventListener("click",setTile)
+
+            if( ((c+1) + (COLUMNS-r))%2 != 0) tile.classList.add("tile")
+            else tile.classList.add("tile", "black")
+
+            tile.id = (c+1).toString()+"-"+(COLUMNS-r).toString()
             document.getElementById("board").append(tile)
         }
     }
-}
 
-function startGame(){
+    let tileName = document.createElement("div")
+    tileName.classList.add("tileName")
+    document.getElementById("board").append(tileName)
 
-}
+    for(let c = 0; c<COLUMNS; c++){
+        let tileName = document.createElement("div")
+        tileName.classList.add("tileName")
+        tileName.innerText = String.fromCharCode('a'.charCodeAt(0)+c)
+        document.getElementById("board").append(tileName)
+    }
 
-function setTile(){
-    console.log(this)
+    let turn = document.createElement("div")
+    turn.id = "turn"
+    turn.innerText = "It's White's Turn"
+    document.getElementById("board").append(turn)
 }
