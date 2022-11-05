@@ -1,7 +1,8 @@
 Currently Working On:
 
-	Chess Game. Status: Unplayable;	
-	Making Website compatible with phones too. Status: Only working correcly on computer browsers;
+	HangMan. Status: not finished;
+	Chess Game. Status: not finished;	
+	Making Website compatible with phones too. Status: Only working correcly on computer browsers, not well done for all displays;
   
   
   
