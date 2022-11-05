@@ -90,7 +90,6 @@ div *{
     max-height: 50px;
     float: left;
     margin: 3px;
-    transition: all 0.5s ease-in-out;
     border-radius: 5px;
     font-size: 30pt;
     padding: 0 0 0 6px;
@@ -101,8 +100,19 @@ div *{
 .tile:hover {
     color: #fff;
     background: rgba(37, 88, 228, 0.712);
-  }
+}
 
 .black {
     background: rgba(128, 128, 128, 0.801);
+}
+
+.selectedB{
+    background: rgba(128, 128, 128, 0.801);
+    border-width: 2px;
+    border-color: red;
+}
+
+.selectedW{
+    border-width: 2px;
+    border-color: red;
 }
