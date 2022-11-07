@@ -302,6 +302,32 @@ function createPawns(turn,pieces){
     }
     return pieces
 }
+
+    /* MOVES */
+function pawnMove(turn){
+    //TODO
+    //TODO
+}
+function TowerMove(turn){
+    //TODO
+    //TODO
+} 
+
+    /* CAPTURES */
+function pawnCapture(turn){
+    //TODO
+    //TODO
+}
+function TowerCapture(turn){
+    //TODO
+    //TODO
+}
+
+    /* PAWN UPGRADE */
+function pawnUpgrade(turn){
+    //TODO
+    //TODO
+}
 /* Pieces Functions */
 
 
